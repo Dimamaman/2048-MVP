@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">2048</string>
+    <string name="game_over">Tawsildi</string>
+    <string name="my_info">Bul mobil qosimshasi Gita Dasturlew akademiyasinda Android Bootcamp 5 de oqip atirg\'an Mamanov Dinmuhammed tarepinen islep shig\'ildi.</string>
+
+    <string name="one">Qag\'iydalardi biliw.Mumkin,siz 2048 o\'yinin alleqashan bilersiz,biraq jaqsiraq bilip qoyg\'an jaqsi.Itibar berin\'.O\'zinin\' haqiqiy(original) oyininda basqalardikinen ajralip turadi.4 tarepke ekrandi sursen\'iz sanlar jiljip qosilatinlari qosilip baraberedi.Har waqitda surgeningizde basqa jerden 2 sani qa\'legen bos orinnan shig\'adi.
+    </string>
+    <string name="two">2048 ge shekem bariwg\'a hareket qilin\'.Har bir ha\'reketde birdey sanli ekki plitkani alip kelgende olar eki plitkanin\' qosindisina ten\' mug\'dar menen qosilip bir plitkag\'a birlesedi.Budan maqset plitkalardan 2048 plitkasin jaratiw</string>
+    <string name="three">Suriwden aldin azg\'ana oylap alin\'.Surgenimizden keyin plitkalarding jaylasiwin ko\'z aldinizg\'a keltirin\'.Har surilgende ko\'birek ball jiynawg\'a hareket qilin\'.A\'wmet</string>
+    <string name="introduction">Mag\'luwmat</string>
+    <string name="qaraqalpaq">Qaraqalpaq tili</string>
+    <string name="rus">Rus tili</string>
+    <string name="english">Ingliz tili</string>
+
+    <string name="score">Ball</string>
+    <string name="high_score">En ulken ball</string>
+    <string name="info_btn">Mag\'luwmat</string>
+    <string name="play_btn">Oynaw</string>
+    <string name="choose_language">Tildi saylan\'</string>
+</resources>
