@@ -8,13 +8,20 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
+import android.view.ViewGroup
+import android.view.Window
+import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.LinearLayoutCompat
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import uz.gita.dima2048.BuildConfig
 import uz.gita.dima2048.R
+import uz.gita.dima2048.databinding.ActivityMain1Binding
 import uz.gita.dima2048.databinding.ActivityMainBinding
 import uz.gita.dima2048.ui.game.GameActivity
 import uz.gita.dima2048.ui.info.InfoActivity
@@ -22,35 +29,35 @@ import java.util.*
 
 
 class MainActivity : AppCompatActivity(),MainContract.View {
-    private var _binding: ActivityMainBinding? = null
+    private var _binding: ActivityMain1Binding? = null
     private val binding get() = _binding!!
     private val presenter: MainContract.Presenter = MainPresenter(this)
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
+        _binding = ActivityMain1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 //        changeStatusBarColor(R.color.statusBarColor,false)
-        changeColor(R.color.statusBarColor)
+        changeColor(uz.gita.dima2048.R.color.statusBarColor)
         binding.apply {
-            playBtn.setOnClickListener {
+            constraintPlay.setOnClickListener {
                 startActivity(Intent(this@MainActivity,GameActivity::class.java))
             }
 
-            infoBtn.setOnClickListener {
+            constraintInfo.setOnClickListener {
                 startActivity(Intent(this@MainActivity,InfoActivity::class.java))
             }
         }
 
         Log.d("TTT","onCreate -> is called")
 
-        binding.globus.setOnClickListener {
+        binding.constraintLang.setOnClickListener {
             presenter.showDialog()
         }
         
 
-        binding.share.setOnClickListener {
+        binding.constraintShare.setOnClickListener {
             presenter.shareApp()
         }
     }
@@ -60,7 +67,7 @@ class MainActivity : AppCompatActivity(),MainContract.View {
     }
 
     override fun showDialog() {
-        val dialog = Dialog(this)
+        /*val dialog = Dialog(this)
         dialog.setContentView(R.layout.item_dialog)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
@@ -87,7 +94,47 @@ class MainActivity : AppCompatActivity(),MainContract.View {
             dialog.dismiss()
             myOnRestart()
         }
+        dialog.show()*/
+
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.bottom_sheet_layout)
+
+        val qqLayout = dialog.findViewById<ConstraintLayout>(R.id.ll_qq)
+
+        val rusLayout = dialog.findViewById<ConstraintLayout>(R.id.ll_rus)
+
+        val englishLayout = dialog.findViewById<ConstraintLayout>(R.id.ll_english)
+
+
+        qqLayout.setOnClickListener {
+            setLocale(this,"qq")
+            presenter.saveLang(this,"qq")
+            dialog.dismiss()
+            myOnRestart()
+        }
+        rusLayout.setOnClickListener {
+            setLocale(this,"rus")
+            presenter.saveLang(this,"rus")
+            dialog.dismiss()
+            myOnRestart()
+        }
+
+        englishLayout.setOnClickListener {
+            setLocale(this,"en")
+            presenter.saveLang(this,"en")
+            dialog.dismiss()
+            myOnRestart()
+        }
+
         dialog.show()
+        dialog.window!!.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation
+        dialog.window!!.setGravity(Gravity.BOTTOM)
     }
 
     override fun share() {

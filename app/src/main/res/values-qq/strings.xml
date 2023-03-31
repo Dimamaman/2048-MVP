@@ -16,6 +16,8 @@
     <string name="score">Ball</string>
     <string name="high_score">En ulken ball</string>
     <string name="info_btn">Mag\'luwmat</string>
+    <string name="lang_btn">Til saylaw</string>
     <string name="play_btn">Oynaw</string>
+    <string name="share_btn">Bo\'lisiw</string>
     <string name="choose_language">Tildi saylan\'</string>
 </resources>

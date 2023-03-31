@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D4CDC5"
+    android:background="#FAF8F0"
     tools:context=".ui.info.InfoActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -43,9 +43,10 @@
                 android:text="@string/my_info"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="22sp"
-                android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="#FE8008"
+                android:textAlignment="center"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
@@ -54,8 +55,9 @@
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:textSize="22sp"
+                android:fontFamily="@font/poppins_medium"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="#FE8008"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
@@ -70,8 +72,9 @@
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:textSize="22sp"
+                android:fontFamily="@font/poppins_medium"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="#FE8008"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
@@ -86,8 +89,9 @@
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="#FE8008"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
@@ -101,9 +105,10 @@
                 android:text="@string/three"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="22sp"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="#FE8008"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>

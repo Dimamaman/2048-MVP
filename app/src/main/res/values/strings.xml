@@ -3,13 +3,13 @@
     <string name="game_over">Game Over</string>
     <string name="my_info">This application is developed by Mamanov Dinmuhammad, who is studying at the Gita Developers Academy Android Bootcamp 5.</string>
 
-    <string name="one">1.
+    <string name="one">
 Know the rules. You probably already know how 2048 works, but just in case, here are the basics. Note that this is how the official game works, but there are many parodies, imitations, and even predecessors, many of which have different mechanics.
 Swipe the screen up, down, left, or right to move all number tiles in that direction. Each tile moves in that direction until it hits the wall or another tile. (Use your arrow keys in the computer version.)
 Each time you make a move, a new 2 or 4 tile appears in an empty spot in a row or column that was moved last move.</string>
-    <string name="two">2.
+    <string name="two">
 Try to get to 2048. When a move causes two tiles of the same number to hit each other, they merge into one tile with a value equal to the sum of the two tiles. For instance, two 2 tiles combine into a 4. The goal is to create a tile with a value of 2048.</string>
-    <string name="three">3.
+    <string name="three">
 Pause and look ahead. It\'s easy to get sucked into the game and make moves as quickly as possible. If you want a better shot at winning, fight this impulse and only make a move when you\'re ready. Look ahead and try to imagine how the board will look after you make the next move, or at least what will happen to a few important tiles.</string>
     <string name="introduction">Introduction</string>
     <string name="qaraqalpaq">Qaraqalpaq language</string>
@@ -18,7 +18,12 @@ Pause and look ahead. It\'s easy to get sucked into the game and make moves as q
 
 
     <string name="info_btn">Info</string>
+    <string name="lang_btn">Language</string>
+
     <string name="play_btn">Play</string>
+    <string name="share_btn">Share App</string>
+
+
     <string name="score">Score</string>
     <string name="high_score">High Score</string>
     <string name="choose_language">Choose language</string>
