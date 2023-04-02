@@ -136,6 +136,9 @@ class GameActivity : AppCompatActivity(), GameContract.View {
                 binding.apply {
                     ivShine.gone()
                     ivShine.clearAnimation()
+                    setScores = true
+                    presenter.clearMatrix()
+                    presenter.describeMatrixToViews()
                 }
             }
         }
