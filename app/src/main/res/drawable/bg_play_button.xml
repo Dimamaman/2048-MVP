@@ -6,6 +6,8 @@
             <solid android:color="#ECE4DB"/>
             <corners
                 android:topLeftRadius="8dp"
+                android:bottomRightRadius="8dp"
+                android:topRightRadius="8dp"
                 android:bottomLeftRadius="8dp"
                 />
         </shape>

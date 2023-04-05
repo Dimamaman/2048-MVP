@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -108,14 +109,14 @@ class MainActivity : AppCompatActivity(),MainContract.View {
 
 
         qqLayout.setOnClickListener {
-            setLocale(this,"qq")
-            presenter.saveLang(this,"qq")
+            setLocale(this,"kaa")
+            presenter.saveLang(this,"kaa")
             dialog.dismiss()
             myOnRestart()
         }
         rusLayout.setOnClickListener {
-            setLocale(this,"rus")
-            presenter.saveLang(this,"rus")
+            setLocale(this,"ru")
+            presenter.saveLang(this,"ru")
             dialog.dismiss()
             myOnRestart()
         }
@@ -146,6 +147,7 @@ class MainActivity : AppCompatActivity(),MainContract.View {
     }
 
     private fun setLocale(context: Context, langCode: String) {
+        Log.d("YYYYY", langCode)
         val locale = Locale(langCode)
         Locale.setDefault(locale)
         val resources = context.resources
